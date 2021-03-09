@@ -24,6 +24,14 @@ string none_base = "   ";
 
 namespace ariel
 {
+    int const hat_index = 0;
+    int const nose_index = 1;
+    int const left_eye_index = 2;
+    int const right_eye_index = 3;
+    int const left_arm_index = 4;
+    int const right_arm_index = 5;
+    int const torso_index = 6;
+    int const base_index = 7;
     long const MIN = 11111111;
     long const MAX = 44444444;
     array<string, 4> hats = {straw_hat, mexican_hat, fez_hat, russian_hat};
@@ -47,7 +55,7 @@ namespace ariel
         string my_snowman;
 
         //Hat
-        switch (number_to_string[0])
+        switch (number_to_string[hat_index])
         {
         case '1':
             my_snowman += hats[0];
@@ -70,7 +78,7 @@ namespace ariel
         my_snowman += "\n";
 
         //Left arm upper
-        switch (number_to_string[4])
+        switch (number_to_string[left_arm_index])
         {
         case '1':
             my_snowman += left_arm_upper[0];
@@ -93,7 +101,7 @@ namespace ariel
         my_snowman += "(";
 
         //Left eye
-        switch (number_to_string[2])
+        switch (number_to_string[left_eye_index])
         {
         case '1':
             my_snowman += left_eyes[0];
@@ -114,7 +122,7 @@ namespace ariel
         }
 
         //Nose
-        switch (number_to_string[1])
+        switch (number_to_string[nose_index])
         {
         case '1':
             my_snowman += nose[0];
@@ -135,7 +143,7 @@ namespace ariel
         }
 
         //Right eye
-        switch (number_to_string[3])
+        switch (number_to_string[right_eye_index])
         {
         case '1':
             my_snowman += right_eyes[0];
@@ -158,7 +166,7 @@ namespace ariel
         my_snowman += ")";
 
         //Right arm upper
-        switch (number_to_string[5])
+        switch (number_to_string[right_arm_index])
         {
         case '1':
             my_snowman += right_arm_upper[0];
@@ -181,7 +189,7 @@ namespace ariel
         my_snowman += "\n";
 
         //Left arm lower
-        switch (number_to_string[4])
+        switch (number_to_string[left_arm_index])
         {
         case '1':
             my_snowman += left_arm_lower[0];
@@ -204,7 +212,7 @@ namespace ariel
         my_snowman += "(";
 
         //Torso
-        switch (number_to_string[6])
+        switch (number_to_string[torso_index])
         {
         case '1':
             my_snowman += torso[0];
@@ -227,7 +235,7 @@ namespace ariel
         my_snowman += ")";
 
         //Right arm lower
-        switch (number_to_string[5])
+        switch (number_to_string[right_arm_index])
         {
         case '1':
             my_snowman += right_arm_lower[0];
@@ -250,7 +258,7 @@ namespace ariel
         my_snowman += "\n (";
 
         //Base
-        switch (number_to_string[7])
+        switch (number_to_string[base_index])
         {
         case '1':
             my_snowman += base[0];
