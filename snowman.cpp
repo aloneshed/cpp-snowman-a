@@ -2,25 +2,24 @@
 #include <iostream>
 #include <array>
 #include "snowman.hpp"
-using namespace std;
 
 //Hats
-string straw_hat = "       \n _===_ ";
-string mexican_hat = "  ___  \n ..... ";
-string fez_hat = "   _   \n  /_\\  ";
-string russian_hat = "  ___  \n(_*_)";
+std::string straw_hat = "       \n _===_ ";
+std::string mexican_hat = "  ___  \n ..... ";
+std::string fez_hat = "   _   \n  /_\\  ";
+std::string russian_hat = "  ___  \n(_*_)";
 
 //Torso
-string buttons_torso = " : ";
-string vest = "] [";
-string inward_arms = "> <";
-string none_torso = "   ";
+std::string buttons_torso = " : ";
+std::string vest = "] [";
+std::string inward_arms = "> <";
+std::string none_torso = "   ";
 
 //Base
-string buttons_base = " : ";
-string feet = "\" \"";
-string flat = "___";
-string none_base = "   ";
+std::string buttons_base = " : ";
+std::string feet = "\" \"";
+std::string flat = "___";
+std::string none_base = "   ";
 
 namespace ariel
 {
@@ -34,25 +33,25 @@ namespace ariel
     int const base_index = 7;
     long const MIN = 11111111;
     long const MAX = 44444444;
-    array<string, 4> hats = {straw_hat, mexican_hat, fez_hat, russian_hat};
-    array<string, 4> nose = {",", ".", "_", " "};
-    array<string, 4> left_eyes = {".", "o", "O", "-"};
-    array<string, 4> right_eyes = {".", "o", "O", "-"};
-    array<string, 4> left_arm_upper = {" ", "\\", " ", " "};
-    array<string, 4> left_arm_lower = {"<", " ", "/", " "};
-    array<string, 4> right_arm_upper = {" ", "/", " ", " "};
-    array<string, 4> right_arm_lower = {">", " ", "\\", " "};
-    array<string, 4> torso = {buttons_torso, vest, inward_arms, none_torso};
-    array<string, 4> base = {buttons_base, feet, flat, none_base};
+    std::array<std::string, 4> hats = {straw_hat, mexican_hat, fez_hat, russian_hat};
+    std::array<std::string, 4> nose = {",", ".", "_", " "};
+    std::array<std::string, 4> left_eyes = {".", "o", "O", "-"};
+    std::array<std::string, 4> right_eyes = {".", "o", "O", "-"};
+    std::array<std::string, 4> left_arm_upper = {" ", "\\", " ", " "};
+    std::array<std::string, 4> left_arm_lower = {"<", " ", "/", " "};
+    std::array<std::string, 4> right_arm_upper = {" ", "/", " ", " "};
+    std::array<std::string, 4> right_arm_lower = {">", " ", "\\", " "};
+    std::array<std::string, 4> torso = {buttons_torso, vest, inward_arms, none_torso};
+    std::array<std::string, 4> base = {buttons_base, feet, flat, none_base};
 
-    string snowman(long number)
+    std::string snowman(long number)
     {
         if (number < MIN || number > MAX)
         {
-            throw range_error("Input out of range");
+            throw std::range_error("Input out of range");
         }
-        string number_to_string = to_string(number);
-        string my_snowman;
+        std::string number_to_string = std::to_string(number);
+        std::string my_snowman;
 
         //Hat
         switch (number_to_string[hat_index])
@@ -71,7 +70,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
@@ -94,7 +93,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
@@ -117,7 +116,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
@@ -138,7 +137,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
@@ -159,7 +158,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
@@ -182,7 +181,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
@@ -205,7 +204,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
@@ -228,7 +227,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
@@ -251,7 +250,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
@@ -274,7 +273,7 @@ namespace ariel
             break;
 
         default:
-            throw invalid_argument("Invalid input");
+            throw std::invalid_argument("Invalid input");
             break;
         }
 
